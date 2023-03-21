@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //window is a default object for any browser so, we get same value in both this script 
+        window.alert("hey guys it's me")
+        alert("hey guys its'me")
+
+
+    </script>
+    <input type="button" onclick="btn()" value="BTN">
+    <input type="button" onclick="btn1()" value="BTN1">
+    <input type="button" onclick="btn2()" value="Redirect">
+    <input type="button" onclick="btn3()" value="timeout">
+    <input type="button" onclick="btn4()" value="Close the Current Tab">
+    <script>
+        function btn(){
+            var x=confirm("do you able to work with us?");
+            if(x==true){
+                alert("Now You are the part of our Family")
+            }
+            else{
+                alert("You Miss The Opportunity")
+            }
+        }
+
+        function btn1(){
+            var x=prompt("What is your Age?");
+            alert("user age is: "+x)
+        }
+        function btn1(){
+            var x=prompt("What is your Age?");
+            alert("user age is: "+x)
+        }
+        function btn2(){
+            open("https://github.com/vipinprajapat");
+        }
+        
+        function btn3(){
+            setTimeout(
+                function(){
+                    alert("This Msg is Show After 5Sec.")
+                },5000)
+        }
+        
+        function btn4(){
+            close();
+        }
+</script>
+</body>
+</html>

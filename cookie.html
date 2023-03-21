@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Cookies</h1>
+    <input type="button" value="SetCookie" onclick="setcookie()">
+    <input type="button" value="GetCookie" onclick="getcookie()">
+    <script>
+    function setcookie(){
+        document.cookie = "name=Vipin";
+    }      
+    function getcookie(){
+        if(document.cookie.length !=0){
+            alert(document.cookie);
+        }
+        else{
+            alert("Cookie is not Set");
+        }
+    }
+    </script>
+</body>
+</html>
