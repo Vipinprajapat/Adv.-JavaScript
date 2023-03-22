@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+    .form
+        {
+        display: flex;
+        flex-direction: column;
+        width: 210px;
+        }
+    #name
+        {
+        margin: 10px 0px;
+        padding: 10px 0px;
+        width: 295px;
+        color: whitesmoke;
+        background-color: black;
+        }
+    input{
+        margin: 10px 20px;
+    }
+        </style>
+  </head>
+  <body>
+    <form method="get" name="myform" onsubmit="return valid()">
+      
+      Name:- <input type="text" name="username" />
+      <br />
+      phone:- <input type="text" name="userphone" />
+      <br />
+      Email:- <input type="text" name="useremail" />
+      <br />
+      <input type="submit" name="submit" id="name" />
+    </form>
+
+    <script>
+      function valid() {
+        var name = document.myform.username.value;
+        var phone = document.myform.userphone.value;
+        var email = document.myform.useremail.value;
+
+        // null value validation
+        if (name == "" || name == null) {
+          alert("Please Enter Your Name");
+          return false;
+        }
+        var alpha = /^[A-Za-z ]+$/;
+        if (!alpha.test(name)) {
+          alert("Only Alphabet Allowed");
+          return false;
+        }
+
+        if (phone == "" || phone == null) {
+          alert("Please Enter Your phone Number");
+          return false;
+        }
+
+        var u_phone = /^[0-9]{10,11}$/;
+        if (!u_phone.test(phone)) {
+          alert("please Enter only Number here");
+          return false;
+        }
+
+        if (email == "" || email == null) {
+          alert("Please Enter Your Email");
+          return false;
+        }
+        var u_email = /^[A-Za-z0-9_]+@[a-zA-z]+.[A-Za-z]{2,4}$/;
+        if (!u_email.test(email)) {
+          alert("please Enter Valid Email");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
