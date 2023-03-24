@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* form{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        } */
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Registration Form</h3>
+    <form name="myform" method="get" onsubmit="return validate();">
+
+        Name:-<input type="text" name="username"><br><br>
+        Password:-<input type="password" name="userpass"><br><br>
+        Confirm Password:-<input type="password" name="usercpass"><br><br>
+        E-mail:-<input type="email" name="useremail"><br><br>
+        Telephone:-<input type="text" name="usertel"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validate(){
+            var name=document.myform.username.value;
+            var pass=document.myform.userpass.value;
+            var cpass=document.myform.usercpass.value;
+            var email=document.myform.useremail.value;
+            var phone=document.myform.usertel.value;
+
+            if(name==null || name==""){
+                alert("plz fill your name");
+                return false;
+            }
+            else if(pass.length<6)
+            {
+                alert("your password must be atleast above than 6");
+                return false;
+            }
+            else if(!(pass==cpass)){
+                alert("Password and Confirm Password Should be Same");
+                return false;
+            }
+            else if(email.length<8){
+                alert("your email can't be less than 8 Character")
+                return false;
+            }
+            else if(phone==null || phone==""){
+                alert("no cant'be zero");
+                return false;
+            }
+            else{}
+        }
+    </script>
+    </body>
+</html>

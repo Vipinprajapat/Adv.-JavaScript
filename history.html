@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="backpage()" value="Previous Page">
+    <input type="button" onclick="Forwardpage()" value="Forward Page">
+    <input type="button" onclick="go()" value="go to n pages">
+    <script>
+        function backpage(){
+            history.back();
+            // history();
+        }
+        function Forwardpage(){
+            history.forward();
+        }
+        function go(){
+            history.go(-2); //-2 means back to pages to current page and viceversa
+        }
+        // document.write("history of this page is: "+history.length);
+    </script>
+</body>
+</html>
