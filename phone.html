@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #err{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" name="myform" onsubmit="return validate()">
+        Phone:-<input type="text" name="phn" id="mob">
+        <span id="err"></span>
+        <input type="submit" value="Submit">
+        <!-- <input type="button" value="button">
+        <button>vp-btn</button> -->
+    </form>
+    <script>
+        function validate(){
+            // if(phone=="" || phone==null){
+                //     alert("phone cant be zero");
+                // }
+            var phone=document.myform.phn.value;
+            if( isNaN(phone)){
+                document.getElementById('err').innerHTML="ERROR**";
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+    </script>
+</body>
+</html>
