@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Creating Object by three Ways:-</h3>
+    <script>
+        document.writeln("<h2>Creating Object using literals</h2>")
+
+        var empl={
+            emp1:"Rahul",
+            emp2:"Jain",
+            id:2401
+        }
+        document.writeln(empl.emp1+" "+empl.emp2+" "+empl.id);
+
+
+        document.write("<h2>Creating Object using new object(instance of an object)</h2>");
+        var worker=new Object();
+        worker.name="Vishal";
+        worker.section="CS";
+        worker.salary=45000;
+
+        document.write(worker.name+" "+worker.section+" "+worker.salary);
+        document.write('<br>');
+        for(x in worker){
+            document.writeln(worker[[x]]);
+        }
+
+        document.write('<br>');
+        document.write('<br>');
+
+        document.write("<h2>Creating Object using Constructor object(by Function object)</h2>");
+        function employee(name,salary,branch){
+            this.name=name;
+            this.salary=salary;
+            this.branch=branch;
+
+        }
+        var x=new employee("Sneha",55000,"CS");
+        for(value in x){
+            document.write(x[value]+" ")
+        }
+
+        document.write('<br>');
+        document.write('<br>');
+
+        document.write("<h1>Update Parameter in Object (Salary)</h1>")
+
+        function emp(id,name,salary){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+            
+            this.updatesalary=updatesalary;
+            function updatesalary(newsalary){
+                this.salary=newsalary;
+            }
+        }
+        var em=new emp(2401,"harsh",45000);
+        document.write("The Employee "+em.name+" having ID "+em.id+" has Salary of "+em.salary);
+        document.write('<br>');
+        em.updatesalary(50000);
+        document.write("The Employee "+em.name+" having ID "+em.id+" has Salary of "+em.salary);
+
+        document.write('<br>');
+        document.write('<br>');
+
+        document.write("<h1>Update Parameter in Object (Salary And ID)</h1>")
+        function employees(name,id,salary){
+            this.name=name;
+            this.id=id;
+            this.salary=salary;
+
+            this.updatedsalary=updatedsalary;
+            function updatedsalary(newsalary,newid){
+                this.salary=newsalary;
+                this.id=newid;
+            }
+            
+        }
+        var $emp=new employees("Abhishek",1303,75000);
+        document.write("The Employee "+$emp.name+" having Id "+$emp.id+" has Salary of "+$emp.salary);
+
+        document.write('<br>');
+        $emp.updatedsalary(92000,1422);
+        document.write("The Employee "+$emp.name+" having Id "+$emp.id+" has Salary of "+$emp.salary);
+
+
+
+
+
+
+
+
+
+        
+    </script>
+
+    
+
+</body>
+</html>
