@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" name="btn" id="btn" value="Click Me" onclick="demo()">
+
+    <h1 id="msg" style="color: green;">hey guys how are you</h1>
+
+    <img src="best-dark-wallpaper.jpg" id="img1" alt="" width="250px" height="250px" onmouseover="myimg()" onmouseleave="myimg1()">
+
+    <script>
+        function demo(){
+            document.getElementById("msg").style.color="red";
+            document.getElementById("msg").style.backgroundColor="yellow";
+            document.getElementById("msg").style.border="2px solid black";
+        }
+
+        function myimg(){
+            document.getElementById("img1").style.width="450px"
+            document.getElementById("img1").style.height="450px"
+            document.getElementById("img1").style.border="12px solid coral";
+            document.getElementById("img1").style.borderRadius="40px";
+
+        }
+        function myimg1(){
+            document.getElementById("img1").style.width="250px"
+            document.getElementById("img1").style.height="250px"
+            document.getElementById("img1").style.border="none";
+            // document.getElementById("img1").style.borderRadius="0px";
+
+
+
+
+        }
+    </script>
+</body>
+</html>
