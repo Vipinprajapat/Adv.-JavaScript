@@ -7,21 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>JavaScript Cookies</h1>
-    <input type="button" value="SetCookie" onclick="setcookie()">
-    <input type="button" value="GetCookie" onclick="getcookie()">
-    <script>
-    function setcookie(){
-        document.cookie = "name=Vipin";
-    }      
-    function getcookie(){
-        if(document.cookie.length !=0){
-            alert(document.cookie);
-        }
-        else{
-            alert("Cookie is not Set");
-        }
-    }
-    </script>
+            <input type="submit" value="Set Cookie" onclick="setcookie()">
+            <input type="submit" value="Get Cookie" onclick="getcookie()">
+
+
+            <script>
+                function setcookie(){
+                    document.cookie="Mark";
+                    document.cookie= "username = Mark Zukurberg";
+                    
+                }
+                function getcookie(){
+                    alert(document.cookie);
+                }
+            </script>
 </body>
 </html>
